@@ -1,4 +1,3 @@
-
 :root {
   --dark: #10120f;
   --green: #c4f36b;
@@ -118,6 +117,28 @@ a {
 .hello {
   color: #b8beb1;
   font-size: 17px;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid orange;
+
+  animation: typing 2s steps(16) forwards,
+    blink 0.7s infinite;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 16ch;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
 
 .hero h1 {
@@ -126,7 +147,7 @@ a {
   margin: 15px 0;
 }
 
-.hero h1 > span:first-child {
+.hero h1>span:first-child {
   color: var(--green);
 }
 
@@ -208,7 +229,7 @@ a {
   border-radius: 50% 50% 5px 5px;
 }
 
-.hero-image > img {
+.hero-image>img {
   width: calc(100% - 35px);
   height: 100%;
   object-fit: cover;
@@ -288,7 +309,7 @@ h2 span {
   object-fit: cover;
 }
 
-.about-content > p:not(.section-label) {
+.about-content>p:not(.section-label) {
   margin-bottom: 15px;
   font-size: 14px;
 }
@@ -568,7 +589,7 @@ h2 span {
   margin: 35px 0;
 }
 
-.testimonial-inner > p:last-child {
+.testimonial-inner>p:last-child {
   color: var(--muted);
   font-size: 12px;
 }
@@ -666,7 +687,7 @@ footer {
 }
 
 .footer-content p,
-.footer-content > a:last-child {
+.footer-content>a:last-child {
   font-size: 11px;
   color: #aaa;
 }
